@@ -13,10 +13,10 @@ function removeProductFromCart(productSection) {
 
 // Value Update
 document.getElementById("phoneQuantityPlus").addEventListener("click", function () {
-        updateProduct("phoneQuantity", 1, "phoneTotalAmount", 1219);
+    updateProduct("phoneQuantity", 1, "phoneTotalAmount", 1219);
 })
 document.getElementById("phoneQuantityMinus").addEventListener("click", function () {
-    if(getQuantity("phoneQuantity")){
+    if (getQuantity("phoneQuantity")) {
         updateProduct("phoneQuantity", -1, "phoneTotalAmount", -1219);
     }
 })
@@ -26,7 +26,7 @@ document.getElementById("caseQuantityPlus").addEventListener("click", function (
 })
 
 document.getElementById("caseQuantityMinus").addEventListener("click", function () {
-    if(getQuantity("caseQuantity")){
+    if (getQuantity("caseQuantity")) {
         updateProduct("caseQuantity", -1, "caseTotalAmount", -59);
     }
 })
@@ -49,9 +49,9 @@ function updateQuantity(id, changeQuantity) {
     document.getElementById(id).value = newQuantity;
 }
 
-function getQuantity(id){
+function getQuantity(id) {
     return parseInt(document.getElementById(id).value);
 }
-function getAmount(id){
+function getAmount(id) {
     return parseFloat(document.getElementById(id).innerText);
 }
